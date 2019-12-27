@@ -1,0 +1,72 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    background-color: #14486b;
+    min-height: 100vh;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.piano{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.key{
+    height: calc(var(--width)*4);
+    width: var(--width);
+}
+
+.white{
+    --width: 100px;
+    height: 400px;
+    background-color: #ffffff;
+    border: 1px solid #333;
+}
+
+.white.active {
+    background-color: #CCC;
+  }
+
+.black{
+    --width: 60px;
+    height: 260px;
+    background-color: #000;
+    border: 1px solid #333;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+}
+
+.black.active{
+    background-color: #333;
+}
+
+.instructions{
+    display: inline-block;
+    color: white;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tittle{
+
+    font-size: 45px;
+    color: white;
+}
